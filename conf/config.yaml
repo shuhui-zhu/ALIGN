@@ -1,0 +1,32 @@
+llm:
+  # api: deepseek
+  # model: deepseek-reasoner  # default
+  # model: deepseek-chat
+  api: openai
+  model: o4-mini # default
+  # model: gpt-4o-mini
+  # api: gemini
+  # api: gemini-v2
+  # model: gemini-2.5-flash # default: expensive
+  # model: gemini-2.5-pro
+  # model: gemini-2.5-flash-lite # alternative
+  # api: claude
+  # model: claude-3-7-sonnet-latest # default: expensive
+  # model: claude-3-7-sonnet-20250219
+  # model: claude-3-5-haiku-20241022
+  # api: together
+  # model: deepseek-ai/DeepSeek-R1
+  # model: moonshotai/Kimi-K2-Instruct # default
+  temperature: 0.0
+
+metadata:
+  trial_timestamp: null
+  save_dir: ./
+
+defaults:
+  - experiment: market
+  - _self_
+
+# hydra:
+#   run:
+#     dir: ./outputs/${uuid:}

@@ -1,0 +1,40 @@
+env:
+  game_name: donor
+  cooperationGain: 5
+  cost: 1
+  benefit: 5
+  termination_prob: 0 # no termination in infinite horizon
+  num_episodes: 1
+  initial_resources: 10
+  discount_factor: 0.99
+  horizon: 'infinite' # 'finite', 'infinite'
+
+agents:
+  num: 9
+  is_gossip: true  # default: true
+  use_equilibrium_knowledge: true # default: true
+  insert_greedy_agent: false # default: false
+  agent_0:
+    name: John
+  agent_1:
+    name: Kate
+  agent_2:
+    name: Jack
+  agent_3:
+    name: Emma
+  agent_4:
+    name: Luke
+  agent_5:
+    name: Mary
+  agent_6:
+    name: Alice
+  agent_7:
+    name: Bob
+  agent_8:
+    name: Charlie
+  # agent_9:
+  #   name: David
+  # agent_10:
+  #   name: Eve
+  # agent_11:
+  #   name: Frank
