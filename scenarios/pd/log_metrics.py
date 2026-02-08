@@ -11,11 +11,11 @@ def init_log(cfg, is_test):
     elif cfg.experiment.agents.insert_greedy_agent:
         project_name = f"ROBUSSTNESS_{cfg.experiment.env.game_name}_N{cfg.experiment.agents.num}_horizon_{cfg.experiment.env.horizon}"
     else:
-        project_name = f"ICLR_{cfg.experiment.env.game_name}_N{cfg.experiment.agents.num}_horizon_{cfg.experiment.env.horizon}"
+        project_name = f"{cfg.experiment.env.game_name}_N{cfg.experiment.agents.num}_horizon_{cfg.experiment.env.horizon}"
     group_name = f"model_{model_name}_gossip_{cfg.experiment.agents.is_gossip}_eqknow_{cfg.experiment.agents.use_equilibrium_knowledge}"
     trial_name = cfg.metadata.trial_timestamp
     run = wandb.init(
-        entity="cooperativeLLMs",
+        entity="ALIGN",
         project=project_name,
         group=group_name,
         name=trial_name,

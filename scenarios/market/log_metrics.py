@@ -12,7 +12,7 @@ def init_log(cfg, is_test):
     if is_test:
         project_name = f"TEST_{game_name}_horizon_{cfg.experiment.env.horizon}"
     else:
-        project_name = f"ICML_NewPrompt_{game_name}_horizon_{cfg.experiment.env.horizon}"
+        project_name = f"{game_name}_horizon_{cfg.experiment.env.horizon}"
 
     group_name = (
         f"model_{model_name}_gossip_{cfg.experiment.agents.is_gossip}"
@@ -20,7 +20,7 @@ def init_log(cfg, is_test):
     trial_name = cfg.metadata.trial_timestamp
 
     run = wandb.init(
-        entity="cooperativeLLMs",
+        entity="ALIGN",
         project=project_name,
         group=group_name,
         name=trial_name,

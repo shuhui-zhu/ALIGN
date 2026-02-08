@@ -12,13 +12,13 @@ def init_log(cfg, is_test):
         project_name = f"TEST_N{cfg.experiment.agents.num}_horizon_{cfg.experiment.env.horizon}"
     # elif cfg.experiment.agents.insert_greedy_agent:
     elif cfg.experiment.agents.insert_greedy_agent:
-        project_name = f"Rebuttal_{game_name}_WithGreedy_N{cfg.experiment.agents.num}_horizon_{cfg.experiment.env.horizon}"
+        project_name = f"{game_name}_WithGreedy_N{cfg.experiment.agents.num}_horizon_{cfg.experiment.env.horizon}"
     else:
-        project_name = f"Rebuttal_{game_name}_Concur_N{cfg.experiment.agents.num}_horizon_{cfg.experiment.env.horizon}"
+        project_name = f"{game_name}_Concur_N{cfg.experiment.agents.num}_horizon_{cfg.experiment.env.horizon}"
     group_name = f"model_{model_name}_gossip_{cfg.experiment.agents.is_gossip}_discount_factor_{discount_factor}_eqknow_{cfg.experiment.agents.use_equilibrium_knowledge}"
     trial_name = cfg.metadata.trial_timestamp
     run = wandb.init(
-        entity="cooperativeLLMs",
+        entity="ALIGN",
         project=project_name,
         group=group_name,
         name=trial_name,
